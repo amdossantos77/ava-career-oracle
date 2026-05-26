@@ -1,0 +1,30 @@
+# --- PROJECT CONTEXT & PRIVATE NOTES ---
+PROJECT_CONTEXT.md
+docs/APPLICATION_STRATEGY.md
+
+# --- SECURITY ---
+.env*
+*.pem
+
+# --- DEPENDENCIES ---
+node_modules/
+frontend/node_modules/
+backend/__pycache__/
+*.pyc
+
+# --- BUILD & NEXT.JS ---
+.next/
+frontend/.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# --- LOGS & DEBUG ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- SYSTEM FILES ---
+.DS_Store
+Thumbs.db
