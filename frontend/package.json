@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@11labs/react": "^0.2.0",
+    "@elevenlabs/client": "^1.8.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.16.0",
@@ -27,5 +28,8 @@
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "@tailwindcss/oxide-linux-x64-gnu": "^4.3.0"
   }
 }

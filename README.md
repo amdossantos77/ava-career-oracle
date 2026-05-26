@@ -1,17 +1,17 @@
-# 🎙️ AVA Voice Challenge: Oráculo de Carreira da 42
+# 🎙️ AVA Voice Challenge: 42 Career Oracle
 
-> **"Reason with rigor, think with heart."** - Este projeto é uma demonstração técnica de um Agente de Voz IA de alta performance, desenvolvido como parte da candidatura para **Voice AI Engineer na AVA AI**.
+> **"Reason with rigor, think with heart."** - This technical project is a high-performance AI Voice Agent demonstration, developed for the **Voice AI Engineer** position at **AVA AI**.
 
-## 🌟 O Conceito
-O **Oráculo da 42** é um agente conversacional desenhado para guiar potenciais alunos no ecossistema da 42. Ele não apenas responde a perguntas, mas integra-se com APIs externas para verificar vagas de estágio em tempo real e capturar leads qualificadas.
+## 🌟 The Concept
+The **42 Career Oracle** is a conversational agent designed to guide potential students through the 42 networking ecosystem. It doesn't just answer questions; it integrates with external APIs to check internship slots in real-time and capture qualified leads.
 
 ## 🛠️ Tech Stack
-*   **Voice AI:** [ElevenLabs Conversational AI](https://elevenlabs.io/) (SDK de React).
-*   **Frontend:** Next.js 15, Tailwind CSS 4, Framer Motion (UI Premium/Glassmorphism).
+*   **Voice AI:** [ElevenLabs Conversational AI](https://elevenlabs.io/) (React SDK).
+*   **Frontend:** Next.js 15, Tailwind CSS 4, Framer Motion (Premium UI/Glassmorphism).
 *   **Backend:** FastAPI (Python 3.12+), Pydantic v2 (Clean Architecture).
-*   **Docs:** Documentação técnica detalhada incluída na pasta `/docs`.
+*   **Docs:** Comprehensive technical documentation in the `/docs` folder.
 
-## 🚀 Como Executar
+## 🚀 Quick Start
 
 ### 1. Backend
 ```bash
@@ -24,22 +24,16 @@ python main.py
 ```bash
 cd frontend
 npm install
-# Cria o ficheiro .env.local baseado no .env.local.example
+# Copy .env.local.example to .env.local and add your Agent ID
 npm run dev
 ```
 
-## 🧠 A Lógica do Agente
-O agente utiliza um **Pipeline de Baixa Latência** via WebSockets. Ele é capaz de:
-1.  Checkar vagas live via `GET /check-slots`.
-2.  Sincronizar leads com o CRM via `POST /capture-lead`.
-3.  Manter uma persona consistente e mentorado (persona "Crack da 42").
-
-## 📄 Documentação Detalhada
-Para uma compreensão profunda de cada camada, consulta:
-*   [Arquitetura do Sistema](docs/SYSTEM_ARCHITECTURE.md)
-*   [Engenharia de Voz](docs/VOICE_AI_ENGINEERING.md)
-*   [Guia de Frontend](docs/FRONTEND_MASTERCLASS.md)
-*   [Integração de Backend](docs/BACKEND_INTEGRATION.md)
+## 📄 Documentation
+Check out our deep-dive guides:
+*   [System Architecture](docs/SYSTEM_ARCHITECTURE.md)
+*   [Voice AI Engineering](docs/VOICE_AI_ENGINEERING.md)
 
 ---
-Desenvolvido com excelência técnica e foco em resultados.
+Developed with technical excellence and product-focus.
+
+[🇵🇹 Versão em Português](README.pt.md)
