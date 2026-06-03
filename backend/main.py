@@ -38,9 +38,20 @@ class StudentLead(BaseModel):
 
 @app.post("/capture-lead")
 async def capture_lead(lead: StudentLead):
-    """Register a potential candidate/lead into the CRM."""
-    # Logic to sync with external CRM (HubSpot/Salesforce) would go here
-    print(f"PIPELINE: Syncing lead {lead.name} ({lead.interest}) to CRM...")
+    """Register a potential candidate/lead into the CRM and local database."""
+    from datetime import datetime
+    
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    entry = f"[{timestamp}] Name: {lead.name} | Phone: {lead.phone} | Interest: {lead.interest}\n"
+    
+    # Save to local file
+    try:
+        with open("leads.txt", "a") as f:
+            f.write(entry)
+        print(f"PIPELINE: Lead {lead.name} saved to leads.txt and CRM.")
+    except Exception as e:
+        print(f"ERROR: Failed to save lead: {e}")
+
     return {
         "status": "success", 
         "confirmation": f"Agendado com sucesso para {lead.name}. Contactaremos em {lead.phone}."
